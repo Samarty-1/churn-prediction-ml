@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "churn-prediction-ml"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["duckdb==1.4.1", "openpyxl==3.1.5", "pyarrow==22.0.0"]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2", "ruff==0.14.3"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["churn*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
