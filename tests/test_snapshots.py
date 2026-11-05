@@ -1,9 +1,11 @@
+import json
 from datetime import datetime, timedelta
 from decimal import Decimal
 from math import sqrt
 
 import duckdb
 import pyarrow as pa
+import pyarrow.parquet as pq
 import pytest
 
 from churn.features import FEATURE_COLUMNS, build_features
@@ -17,9 +19,9 @@ from churn.holdout import (
     matured_training_cutoffs,
     require_development,
 )
-from churn.ingest import SCHEMA
+from churn.ingest import SCHEMA, sha256
 from churn.labels import build_labels
-from churn.snapshots import read_snapshot, snapshot_path
+from churn.snapshots import SNAPSHOT_CODE, read_snapshot, snapshot_path, text_digest
 
 T = datetime(2010, 6, 9)
 SALE_SCHEMA = SCHEMA.append(pa.field("line_amount", pa.decimal128(18, 3)))
@@ -192,3 +194,53 @@ def test_rolling_schedule_purges_unmatured_labels():
         for train in matured_training_cutoffs(test):
             assert train + HORIZON <= test
     assert datetime(2010, 9, 9) not in matured_training_cutoffs(datetime(2010, 11, 9))
+
+
+def test_snapshot_reader_verifies_data_and_protocol(tmp_path):
+    prereg = tmp_path / "docs/PREREGISTRATION.md"
+    prereg.parent.mkdir()
+    prereg.write_text("Registered fixture protocol\n")
+    for name in SNAPSHOT_CODE:
+        path = tmp_path / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("fixture source\n")
+    with connect([line("A", -1, "1")]) as con:
+        features = build_features(con, T)
+        labels = build_labels(con, T)
+    snapshot = features.append_column("churn", labels["churn"])
+    snapshot = snapshot.append_column("cutoff", pa.array([T]))
+    snapshot = snapshot.append_column("label_end", pa.array([T + HORIZON]))
+    path = snapshot_path(tmp_path, T)
+    path.parent.mkdir(parents=True)
+    pq.write_table(snapshot, path)
+    report = {
+        "preregistration_sha256": text_digest(prereg),
+        "code_sha256": {name: text_digest(tmp_path / name) for name in SNAPSHOT_CODE},
+        "cutoffs": [{"cutoff": T.date().isoformat(), "snapshot_sha256": sha256(path)}],
+    }
+    (tmp_path / "results").mkdir()
+    (tmp_path / "results/development_summary.json").write_text(json.dumps(report))
+    assert read_snapshot(tmp_path, T).equals(snapshot)
+    prereg.write_text("Changed protocol\n")
+    with pytest.raises(ValueError, match="Preregistration changed"):
+        read_snapshot(tmp_path, T)
+    prereg.write_text("Registered fixture protocol\n")
+    path.write_bytes(b"not the recorded snapshot")
+    with pytest.raises(ValueError, match="digest mismatch"):
+        read_snapshot(tmp_path, T)
+
+
+def test_committed_summary_matches_registered_schedule_and_code():
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1]
+    report = json.loads((root / "results/development_summary.json").read_text())
+    assert [r["cutoff"] for r in report["cutoffs"]] == [
+        t.date().isoformat() for t in DEVELOPMENT_CUTOFFS
+    ]
+    assert report["sealed_cutoffs"] == [t.date().isoformat() for t in SEALED_CUTOFFS]
+    assert report["holdout_status"] == "sealed"
+    assert report["feature_allowlist"] == list(FEATURE_COLUMNS)
+    assert report["preregistration_sha256"] == text_digest(root / "docs/PREREGISTRATION.md")
+    assert report["code_sha256"] == {name: text_digest(root / name) for name in SNAPSHOT_CODE}
+    assert all(r["future_deletion_identical"] for r in report["cutoffs"])

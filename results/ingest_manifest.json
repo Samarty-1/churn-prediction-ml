@@ -1,6 +1,6 @@
 {
   "url": "https://archive.ics.uci.edu/static/public/502/online+retail+ii.zip",
-  "retrieved_at_utc": "2026-11-05T15:31:49.537218+00:00",
+  "retrieved_at_utc": "2026-11-05T15:49:46.673692+00:00",
   "archive_sha256": "572e36277c2390fbfde10664750731e0a86f55e33470d91919085f0408e67bfb",
   "workbook_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
   "parquet_sha256": "5053778ae1d00bb6bc5b1e8fe7eb9b979d8cc7c1094722685050d30dbe63767c",

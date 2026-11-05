@@ -11,3 +11,4 @@ models/
 .ruff_cache/
 build/
 dist/
+*.log
