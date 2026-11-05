@@ -5,6 +5,8 @@ from pathlib import Path
 
 import duckdb
 
+from churn.ingest import sha256
+
 ORDER = [
     "sheet_overlap",
     "exact_duplicate",
@@ -86,6 +88,14 @@ def stage(connection, sql_dir: Path, *, full_data: bool = False) -> dict:
         "missing_customer_sale_revenue_gbp": str(missing),
         "eligible_product_sale_revenue_gbp": str(missing + retained),
         "retained_sale_revenue_gbp": str(retained),
+        "positive_price_rounds_to_zero_rows": connection.execute(
+            "SELECT count(*) FROM sales WHERE price::decimal(18, 2) = 0"
+        ).fetchone()[0],
+        "positive_price_rounds_to_zero_amount_gbp": str(
+            connection.execute(
+                "SELECT coalesce(sum(line_amount), 0) FROM sales WHERE price::decimal(18, 2) = 0"
+            ).fetchone()[0]
+        ),
         "customers": connection.execute("SELECT count(DISTINCT customer_id) FROM sales").fetchone()[
             0
         ],
@@ -103,6 +113,9 @@ def stage(connection, sql_dir: Path, *, full_data: bool = False) -> dict:
 
 
 def run_staging(root: Path, parquet: Path) -> dict:
+    manifest = json.loads((root / "results/ingest_manifest.json").read_text())
+    if sha256(parquet) != manifest["parquet_sha256"]:
+        raise ValueError("Raw Parquet differs from the ingestion manifest")
     with duckdb.connect() as connection:
         connection.read_parquet(str(parquet)).create_view("raw_lines")
         report = stage(connection, root / "sql/staging", full_data=True)

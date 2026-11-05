@@ -9,6 +9,8 @@ are local ignored artifacts. No customer-level data is committed.
 The import streams the original workbook with openpyxl and lands typed Arrow
 Parquet. Source sheet and Excel row number preserve lineage and first-copy
 semantics. Invoice IDs, descriptions and stock codes retain their source values.
+Non-null text fields are stringified, including numeric Excel description cells;
+the original workbook retains the original Excel cell types.
 Prices use exact three-decimal GBP values, with a hard failure for greater
 precision; line amounts are not rounded to pennies before aggregation.
 
@@ -41,3 +43,9 @@ Contracts verify source counts and date coverage, overlap equality and size,
 required fields, source-row uniqueness, sales exact-line uniqueness, positive
 sales amounts and row reconciliation. Failures abort before output export.
 The small fixtures exercise cleaning rules without downloading UCI data.
+
+The full import initially failed on a numeric Excel cell in a text column.
+The importer now stringifies non-null text fields; a fixture covers that case.
+The exact-price rule differs from the old staging script, which cast unit prices
+to pennies before deciding whether a row was a zero-price adjustment. The
+machine-readable summary reports the affected retained lines and amount.

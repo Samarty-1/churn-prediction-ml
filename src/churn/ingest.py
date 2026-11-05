@@ -79,12 +79,12 @@ def land_workbook(workbook: Path, destination: Path) -> dict:
                                 [
                                     str(invoice) if invoice is not None else None,
                                     str(stock) if stock is not None else None,
-                                    description,
+                                    str(description) if description is not None else None,
                                     int(quantity),
                                     date,
                                     exact_price,
                                     str(int(customer)) if customer is not None else None,
-                                    country,
+                                    str(country) if country is not None else None,
                                     sheet.title,
                                     row_number,
                                 ],
@@ -123,6 +123,11 @@ def ingest(root: Path) -> Path:
         finally:
             partial.unlink(missing_ok=True)
     workbook = raw / "online_retail_II.xlsx"
+    manifest_path = root / "results/ingest_manifest.json"
+    if manifest_path.exists():
+        previous = json.loads(manifest_path.read_text())
+        if sha256(archive) != previous["archive_sha256"]:
+            raise ValueError("Archive differs from the recorded source; review before continuing")
     with zipfile.ZipFile(archive) as zipped:
         members = [name for name in zipped.namelist() if name.endswith(".xlsx")]
         if len(members) != 1:

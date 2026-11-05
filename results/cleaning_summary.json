@@ -1,0 +1,77 @@
+{
+  "raw_rows": 1067371,
+  "waterfall": [
+    {
+      "step": "sheet_overlap",
+      "rows": 22523,
+      "signed_amount_gbp": "377488.450",
+      "remaining_sale_candidates": 1044848
+    },
+    {
+      "step": "exact_duplicate",
+      "rows": 11812,
+      "signed_amount_gbp": "54228.420",
+      "remaining_sale_candidates": 1033036
+    },
+    {
+      "step": "bad_debt_adjustment",
+      "rows": 6,
+      "signed_amount_gbp": "-147614.080",
+      "remaining_sale_candidates": 1033030
+    },
+    {
+      "step": "non_product",
+      "rows": 5795,
+      "signed_amount_gbp": "75748.711",
+      "remaining_sale_candidates": 1027235
+    },
+    {
+      "step": "cancellation",
+      "rows": 17915,
+      "signed_amount_gbp": "-716462.570",
+      "remaining_sale_candidates": 1009320
+    },
+    {
+      "step": "stock_adjustment",
+      "rows": 5963,
+      "signed_amount_gbp": "0.000",
+      "remaining_sale_candidates": 1003357
+    },
+    {
+      "step": "missing_customer",
+      "rows": 226761,
+      "signed_amount_gbp": "2575278.900",
+      "remaining_sale_candidates": 776596
+    },
+    {
+      "step": "sale",
+      "rows": 776596,
+      "signed_amount_gbp": "17068582.737",
+      "remaining_sale_candidates": 776596
+    }
+  ],
+  "contracts": {
+    "raw_required_fields": 0,
+    "raw_source_uniqueness": 0,
+    "sales_positive_identified": 0,
+    "sales_exact_uniqueness": 0,
+    "date_bounds": 0,
+    "row_reconciliation": 0,
+    "overlap_multiset_equality": 0,
+    "source_sheet_counts": 0,
+    "overlap_count": 0,
+    "date_coverage": 0
+  },
+  "missing_customer_sale_revenue_gbp": "2575278.900",
+  "eligible_product_sale_revenue_gbp": "19643861.637",
+  "retained_sale_revenue_gbp": "17068582.737",
+  "positive_price_rounds_to_zero_rows": 17,
+  "positive_price_rounds_to_zero_amount_gbp": "0.017",
+  "customers": 5852,
+  "orders": 36594,
+  "sale_date_range": [
+    "2009-12-01 07:45:00",
+    "2011-12-09 12:50:00"
+  ],
+  "amount_note": "Exact GBP decimal amounts; no price or line rounding. Not net revenue."
+}

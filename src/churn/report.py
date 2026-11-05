@@ -44,6 +44,12 @@ of otherwise valid gross product sales, from GBP {report["eligible_product_sale_
 Retained gross product-sales revenue is GBP {report["retained_sale_revenue_gbp"]}.
 These are sales amounts before cancellation netting, not margin or profit.
 
+One difference from the earlier retail SQL: {report["positive_price_rounds_to_zero_rows"]}
+positive-price lines (GBP {report["positive_price_rounds_to_zero_amount_gbp"]} total)
+would become zero-price adjustments if unit prices were first rounded to pennies.
+They remain sales here under the stated positive-price rule. Their relevance to
+purchase-based labels will be documented before modelling.
+
 Source: [UCI Online Retail II](https://doi.org/10.24432/C5CG6D).
 Measured outputs: [cleaning summary](results/cleaning_summary.json) and
 [source digests](results/ingest_manifest.json). See [data rules](docs/DATA.md).
@@ -74,7 +80,7 @@ Use a project virtual environment, never the base Anaconda environment:
 
 ```powershell
 py -3.11 -m venv .venv
-.venv/Scripts/python.exe -m pip install -e '.[dev]'
+.venv/Scripts/python.exe -m pip install -c requirements-lock.txt -e '.[dev]'
 .venv/Scripts/python.exe -m churn run-all
 .venv/Scripts/python.exe -m pytest -q
 .venv/Scripts/python.exe -m ruff check .
