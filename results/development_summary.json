@@ -9,9 +9,9 @@
   ],
   "preregistration_sha256": "f41961ea36072c3358c6d08234888828d9422347d914b6d3d073be64d3135552",
   "code_sha256": {
-    "src/churn/features.py": "2a5102835bc3a1b157303b83f51ce3e0b39eea70f3fdfaf1013ec45d1c060f5d",
-    "src/churn/labels.py": "f9765a0a3cca0519c2cd59173aa41b814073262de0b6ff0ed6238a96a509cff0",
-    "src/churn/holdout.py": "ca52d6e063dd55c1aace74fa2904666e3c9b77852b8a542332d7db9758028ce8",
+    "src/churn/features.py": "0e07026acd2bc5df9d8434842391e81df4362fa18faaeb7bc4e6640df0a348ac",
+    "src/churn/labels.py": "664db5f7292b098cc99a5bc7045ebb2b8909dcabcaab109cc84321fbd0f9e826",
+    "src/churn/holdout.py": "ffbfbcf82ed4a123819800282db87199363a682791f72050841ac752fef0d5cc",
     "src/churn/snapshots.py": "e561c97ec4bbdd18605fa55bf1752334c10488592d05dbb010ccdc4b9f845f54",
     "sql/features/01_snapshot.sql": "872cf0b314c4c4aa3fa05c062c710f9a1f9886ff92adaf6b57ebcfa31dd2fa1d"
   },

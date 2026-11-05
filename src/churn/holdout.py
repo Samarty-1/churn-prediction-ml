@@ -1,6 +1,11 @@
 """Fail-closed evaluation seal. No unsealing mechanism exists in Phase 2."""
 
-from datetime import date, datetime, time, timedelta
+import json
+from contextlib import contextmanager
+from contextvars import ContextVar
+from datetime import date, datetime, time, timedelta, timezone
+
+_ACTIVE = ContextVar("holdout_evaluation_session", default=False)
 
 CUTOFFS = tuple(
     datetime(year, month, 9)
@@ -40,3 +45,42 @@ def matured_training_cutoffs(test_cutoff) -> tuple[datetime, ...]:
 
 def development_origins() -> tuple[datetime, ...]:
     return tuple(t for t in DEVELOPMENT_CUTOFFS if len(matured_training_cutoffs(t)) >= 3)
+
+
+def require_evaluation_cutoff(cutoff):
+    try:
+        return require_development(cutoff)
+    except HoldoutSealedError:
+        parsed = datetime.fromisoformat(cutoff) if isinstance(cutoff, str) else cutoff
+        if _ACTIVE.get() and parsed in SEALED_CUTOFFS:
+            return parsed
+        raise
+
+
+@contextmanager
+def one_time_session(root, freeze_digest):
+    approval = json.loads((root / "docs/HOLDOUT_APPROVAL.json").read_text())
+    if approval.get("approved") is not True or not approval.get("user_statement"):
+        raise HoldoutSealedError("Explicit approval has not been recorded")
+    path = root / "results/holdout_receipt.json"
+    receipt = {
+        "status": "started",
+        "freeze_sha256": freeze_digest,
+        "started_at_utc": datetime.now(timezone.utc).isoformat(),
+        "approval": approval,
+    }
+    # Exclusive create consumes the permission even if evaluation crashes.
+    with path.open("x", encoding="utf-8") as stream:
+        json.dump(receipt, stream, indent=2)
+    token = _ACTIVE.set(True)
+    try:
+        yield receipt
+    except BaseException as error:
+        receipt.update(status="failed", error=repr(error))
+        raise
+    else:
+        receipt["status"] = "complete"
+    finally:
+        _ACTIVE.reset(token)
+        receipt["finished_at_utc"] = datetime.now(timezone.utc).isoformat()
+        path.write_text(json.dumps(receipt, indent=2, default=str) + "\n", encoding="utf-8")

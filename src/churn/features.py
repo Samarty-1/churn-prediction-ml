@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-from churn.holdout import require_development
+from churn.holdout import require_evaluation_cutoff
 
 FEATURE_COLUMNS = (
     "recency_days",
@@ -42,7 +42,7 @@ SQL = Path(__file__).resolve().parents[2] / "sql/features/01_snapshot.sql"
 
 
 def build_features(connection, cutoff):
-    cutoff = require_development(cutoff)  # Must precede all data access.
+    cutoff = require_evaluation_cutoff(cutoff)  # Must precede all data access.
     connection.execute(
         "CREATE OR REPLACE TEMP TABLE snapshot_clock AS SELECT ?::TIMESTAMP cutoff", [cutoff]
     )

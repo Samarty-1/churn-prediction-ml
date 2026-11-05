@@ -1,0 +1,1202 @@
+[
+  {
+    "save_rate": 0.02,
+    "offer_cost": 1,
+    "method": "bgnbd",
+    "predicted_profit": 10930.297049529203,
+    "outcome_profit_proxy": 9856.413004,
+    "contacts": 8126
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 1,
+    "method": "constant",
+    "predicted_profit": 33040.58026122603,
+    "outcome_profit_proxy": 8971.316044000001,
+    "contacts": 10529
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 1,
+    "method": "lightgbm",
+    "predicted_profit": 10820.730041360363,
+    "outcome_profit_proxy": 8393.129858,
+    "contacts": 7837
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 1,
+    "method": "logistic",
+    "predicted_profit": 11736.833282729462,
+    "outcome_profit_proxy": 7960.407317999999,
+    "contacts": 7938
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 1,
+    "method": "recency",
+    "predicted_profit": 6553.841865757706,
+    "outcome_profit_proxy": 5243.940826,
+    "contacts": 4259
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 1,
+    "method": "rfm",
+    "predicted_profit": 15485.760420703531,
+    "outcome_profit_proxy": 8404.317057999999,
+    "contacts": 8513
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 2,
+    "method": "bgnbd",
+    "predicted_profit": 6043.0993922546195,
+    "outcome_profit_proxy": 4093.887852,
+    "contacts": 2865
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 2,
+    "method": "constant",
+    "predicted_profit": 25345.13732006785,
+    "outcome_profit_proxy": 1292.8860839999995,
+    "contacts": 5700
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 2,
+    "method": "lightgbm",
+    "predicted_profit": 6191.520473607826,
+    "outcome_profit_proxy": 2916.6659520000003,
+    "contacts": 2667
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 2,
+    "method": "logistic",
+    "predicted_profit": 6627.103029906975,
+    "outcome_profit_proxy": 2010.0082120000002,
+    "contacts": 3211
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 2,
+    "method": "recency",
+    "predicted_profit": 3884.5049402254267,
+    "outcome_profit_proxy": 2079.966206,
+    "contacts": 1664
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 2,
+    "method": "rfm",
+    "predicted_profit": 10178.522341391272,
+    "outcome_profit_proxy": 2039.526732,
+    "contacts": 3279
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 5,
+    "method": "bgnbd",
+    "predicted_profit": 2435.7123092305014,
+    "outcome_profit_proxy": 998.4203320000004,
+    "contacts": 478
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 5,
+    "method": "constant",
+    "predicted_profit": 16080.632925554488,
+    "outcome_profit_proxy": -3485.8758080000002,
+    "contacts": 1675
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 5,
+    "method": "lightgbm",
+    "predicted_profit": 2907.3802332807586,
+    "outcome_profit_proxy": 497.0005119999999,
+    "contacts": 448
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 5,
+    "method": "logistic",
+    "predicted_profit": 2391.5088233813826,
+    "outcome_profit_proxy": -120.07388799999998,
+    "contacts": 548
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 5,
+    "method": "recency",
+    "predicted_profit": 1738.7928260656001,
+    "outcome_profit_proxy": 308.05902599999996,
+    "contacts": 291
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 5,
+    "method": "rfm",
+    "predicted_profit": 5674.176971536185,
+    "outcome_profit_proxy": -590.120928,
+    "contacts": 687
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 10,
+    "method": "bgnbd",
+    "predicted_profit": 1308.0674889409136,
+    "outcome_profit_proxy": -105.21830000000004,
+    "contacts": 113
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 10,
+    "method": "constant",
+    "predicted_profit": 11228.539388074181,
+    "outcome_profit_proxy": -3538.195928,
+    "contacts": 578
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 10,
+    "method": "lightgbm",
+    "predicted_profit": 1743.7402727884664,
+    "outcome_profit_proxy": -492.20776,
+    "contacts": 139
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 10,
+    "method": "logistic",
+    "predicted_profit": 1094.2591108544461,
+    "outcome_profit_proxy": -359.133954,
+    "contacts": 120
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 10,
+    "method": "recency",
+    "predicted_profit": 1028.8817907444734,
+    "outcome_profit_proxy": 154.36756000000003,
+    "contacts": 74
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 10,
+    "method": "rfm",
+    "predicted_profit": 3699.978397699074,
+    "outcome_profit_proxy": -1354.5385999999999,
+    "contacts": 239
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 20,
+    "method": "bgnbd",
+    "predicted_profit": 648.3000912086482,
+    "outcome_profit_proxy": -419.25982,
+    "contacts": 41
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 20,
+    "method": "constant",
+    "predicted_profit": 7589.220444836089,
+    "outcome_profit_proxy": -3986.0746799999997,
+    "contacts": 246
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 20,
+    "method": "lightgbm",
+    "predicted_profit": 915.8245611420381,
+    "outcome_profit_proxy": -663.42064,
+    "contacts": 56
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 20,
+    "method": "logistic",
+    "predicted_profit": 441.2419756635409,
+    "outcome_profit_proxy": -401.39964000000003,
+    "contacts": 30
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 20,
+    "method": "recency",
+    "predicted_profit": 648.7215682213093,
+    "outcome_profit_proxy": -99.26474,
+    "contacts": 25
+  },
+  {
+    "save_rate": 0.02,
+    "offer_cost": 20,
+    "method": "rfm",
+    "predicted_profit": 2138.475232063188,
+    "outcome_profit_proxy": -1699.25982,
+    "contacts": 105
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 1,
+    "method": "bgnbd",
+    "predicted_profit": 44323.70767986432,
+    "outcome_profit_proxy": 44348.48906,
+    "contacts": 14842
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 1,
+    "method": "constant",
+    "predicted_profit": 102223.32520991993,
+    "outcome_profit_proxy": 44368.870409999996,
+    "contacts": 15642
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 1,
+    "method": "lightgbm",
+    "predicted_profit": 43809.66439109507,
+    "outcome_profit_proxy": 43766.33631,
+    "contacts": 14883
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 1,
+    "method": "logistic",
+    "predicted_profit": 45441.17736075991,
+    "outcome_profit_proxy": 42576.71521,
+    "contacts": 14111
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 1,
+    "method": "recency",
+    "predicted_profit": 25392.693335380583,
+    "outcome_profit_proxy": 24708.370615,
+    "contacts": 7841
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 1,
+    "method": "rfm",
+    "predicted_profit": 56237.425631601036,
+    "outcome_profit_proxy": 43821.147010000015,
+    "contacts": 15104
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 2,
+    "method": "bgnbd",
+    "predicted_profit": 31867.60258734403,
+    "outcome_profit_proxy": 29965.834109999996,
+    "contacts": 10125
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 2,
+    "method": "constant",
+    "predicted_profit": 88331.28686384024,
+    "outcome_profit_proxy": 29021.47761,
+    "contacts": 12330
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 2,
+    "method": "lightgbm",
+    "predicted_profit": 31461.958139026374,
+    "outcome_profit_proxy": 27294.066145000004,
+    "contacts": 9892
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 2,
+    "method": "logistic",
+    "predicted_profit": 33707.410990643235,
+    "outcome_profit_proxy": 25757.713945000003,
+    "contacts": 9571
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 2,
+    "method": "recency",
+    "predicted_profit": 18799.785847454306,
+    "outcome_profit_proxy": 16248.991215,
+    "contacts": 5391
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 2,
+    "method": "rfm",
+    "predicted_profit": 43442.209726768,
+    "outcome_profit_proxy": 27169.857095,
+    "contacts": 10460
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 5,
+    "method": "bgnbd",
+    "predicted_profit": 15107.748480636545,
+    "outcome_profit_proxy": 10234.719630000001,
+    "contacts": 2865
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 5,
+    "method": "constant",
+    "predicted_profit": 63362.84330016961,
+    "outcome_profit_proxy": 3232.2152100000003,
+    "contacts": 5700
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 5,
+    "method": "lightgbm",
+    "predicted_profit": 15478.801184019565,
+    "outcome_profit_proxy": 7291.66488,
+    "contacts": 2667
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 5,
+    "method": "logistic",
+    "predicted_profit": 16567.75757476743,
+    "outcome_profit_proxy": 5025.020530000002,
+    "contacts": 3211
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 5,
+    "method": "recency",
+    "predicted_profit": 9711.262350563562,
+    "outcome_profit_proxy": 5199.915515000001,
+    "contacts": 1664
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 5,
+    "method": "rfm",
+    "predicted_profit": 25446.305853478174,
+    "outcome_profit_proxy": 5098.816830000002,
+    "contacts": 3279
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 10,
+    "method": "bgnbd",
+    "predicted_profit": 7611.276270750692,
+    "outcome_profit_proxy": 3779.94623,
+    "contacts": 766
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 10,
+    "method": "constant",
+    "predicted_profit": 45092.42196268296,
+    "outcome_profit_proxy": -7013.894254999999,
+    "contacts": 2261
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 10,
+    "method": "lightgbm",
+    "predicted_profit": 8624.182014926202,
+    "outcome_profit_proxy": 2721.433379999999,
+    "contacts": 678
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 10,
+    "method": "logistic",
+    "predicted_profit": 7729.527745543645,
+    "outcome_profit_proxy": -283.36347,
+    "contacts": 909
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 10,
+    "method": "recency",
+    "predicted_profit": 5264.088174541769,
+    "outcome_profit_proxy": 1468.2595150000002,
+    "contacts": 452
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 10,
+    "method": "rfm",
+    "predicted_profit": 16272.785025336449,
+    "outcome_profit_proxy": -1091.4016699999997,
+    "contacts": 1022
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 20,
+    "method": "bgnbd",
+    "predicted_profit": 3943.9879059934083,
+    "outcome_profit_proxy": -234.69159999999994,
+    "contacts": 164
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 20,
+    "method": "constant",
+    "predicted_profit": 31500.247372215075,
+    "outcome_profit_proxy": -9012.68717,
+    "contacts": 814
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 20,
+    "method": "lightgbm",
+    "predicted_profit": 5153.303242406066,
+    "outcome_profit_proxy": -373.723435,
+    "contacts": 185
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 20,
+    "method": "logistic",
+    "predicted_profit": 3477.3838984651156,
+    "outcome_profit_proxy": -651.0109199999998,
+    "contacts": 189
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 20,
+    "method": "recency",
+    "predicted_profit": 3028.234856728171,
+    "outcome_profit_proxy": 434.62771500000014,
+    "contacts": 111
+  },
+  {
+    "save_rate": 0.05,
+    "offer_cost": 20,
+    "method": "rfm",
+    "predicted_profit": 10645.857370673853,
+    "outcome_profit_proxy": -3294.5946000000004,
+    "contacts": 333
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 1,
+    "method": "bgnbd",
+    "predicted_profit": 104490.28031123677,
+    "outcome_profit_proxy": 105858.55122,
+    "contacts": 16647
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 1,
+    "method": "constant",
+    "predicted_profit": 220853.34953184336,
+    "outcome_profit_proxy": 105968.16871999999,
+    "contacts": 16915
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 1,
+    "method": "lightgbm",
+    "predicted_profit": 103546.63901414169,
+    "outcome_profit_proxy": 105650.48122,
+    "contacts": 16769
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 1,
+    "method": "logistic",
+    "predicted_profit": 106077.91733777174,
+    "outcome_profit_proxy": 105134.43842,
+    "contacts": 16207
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 1,
+    "method": "recency",
+    "predicted_profit": 59268.527635968916,
+    "outcome_profit_proxy": 58927.31293000001,
+    "contacts": 8939
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 1,
+    "method": "rfm",
+    "predicted_profit": 128535.19635770276,
+    "outcome_profit_proxy": 105843.37672,
+    "contacts": 16814
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 2,
+    "method": "bgnbd",
+    "predicted_profit": 88647.41535972863,
+    "outcome_profit_proxy": 88696.97812,
+    "contacts": 14842
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 2,
+    "method": "constant",
+    "predicted_profit": 204446.65041983986,
+    "outcome_profit_proxy": 88737.74081999999,
+    "contacts": 15642
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 2,
+    "method": "lightgbm",
+    "predicted_profit": 87619.32878219015,
+    "outcome_profit_proxy": 87532.67262,
+    "contacts": 14883
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 2,
+    "method": "logistic",
+    "predicted_profit": 90882.35472151982,
+    "outcome_profit_proxy": 85153.43042,
+    "contacts": 14111
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 2,
+    "method": "recency",
+    "predicted_profit": 50785.38667076117,
+    "outcome_profit_proxy": 49416.74123,
+    "contacts": 7841
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 2,
+    "method": "rfm",
+    "predicted_profit": 112474.85126320207,
+    "outcome_profit_proxy": 87642.29402000003,
+    "contacts": 15104
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 5,
+    "method": "bgnbd",
+    "predicted_profit": 54651.48524764604,
+    "outcome_profit_proxy": 49282.065019999995,
+    "contacts": 8126
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 5,
+    "method": "constant",
+    "predicted_profit": 165202.90130613002,
+    "outcome_profit_proxy": 44856.580219999996,
+    "contacts": 10529
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 5,
+    "method": "lightgbm",
+    "predicted_profit": 54103.65020680178,
+    "outcome_profit_proxy": 41965.64929,
+    "contacts": 7837
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 5,
+    "method": "logistic",
+    "predicted_profit": 58684.16641364725,
+    "outcome_profit_proxy": 39802.03659,
+    "contacts": 7938
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 5,
+    "method": "recency",
+    "predicted_profit": 32769.209328788515,
+    "outcome_profit_proxy": 26219.70413,
+    "contacts": 4259
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 5,
+    "method": "rfm",
+    "predicted_profit": 77428.80210351766,
+    "outcome_profit_proxy": 42021.58529,
+    "contacts": 8513
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 10,
+    "method": "bgnbd",
+    "predicted_profit": 30215.49696127309,
+    "outcome_profit_proxy": 20469.439260000003,
+    "contacts": 2865
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 10,
+    "method": "constant",
+    "predicted_profit": 126725.68660033922,
+    "outcome_profit_proxy": 6464.430420000001,
+    "contacts": 5700
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 10,
+    "method": "lightgbm",
+    "predicted_profit": 30957.60236803913,
+    "outcome_profit_proxy": 14583.32976,
+    "contacts": 2667
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 10,
+    "method": "logistic",
+    "predicted_profit": 33135.51514953486,
+    "outcome_profit_proxy": 10050.041060000003,
+    "contacts": 3211
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 10,
+    "method": "recency",
+    "predicted_profit": 19422.524701127124,
+    "outcome_profit_proxy": 10399.831030000001,
+    "contacts": 1664
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 10,
+    "method": "rfm",
+    "predicted_profit": 50892.61170695635,
+    "outcome_profit_proxy": 10197.633660000003,
+    "contacts": 3279
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 20,
+    "method": "bgnbd",
+    "predicted_profit": 15222.552541501384,
+    "outcome_profit_proxy": 7559.89246,
+    "contacts": 766
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 20,
+    "method": "constant",
+    "predicted_profit": 90184.84392536592,
+    "outcome_profit_proxy": -14027.788509999998,
+    "contacts": 2261
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 20,
+    "method": "lightgbm",
+    "predicted_profit": 17248.364029852404,
+    "outcome_profit_proxy": 5442.866759999998,
+    "contacts": 678
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 20,
+    "method": "logistic",
+    "predicted_profit": 15459.05549108729,
+    "outcome_profit_proxy": -566.72694,
+    "contacts": 909
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 20,
+    "method": "recency",
+    "predicted_profit": 10528.176349083538,
+    "outcome_profit_proxy": 2936.5190300000004,
+    "contacts": 452
+  },
+  {
+    "save_rate": 0.1,
+    "offer_cost": 20,
+    "method": "rfm",
+    "predicted_profit": 32545.570050672897,
+    "outcome_profit_proxy": -2182.8033399999995,
+    "contacts": 1022
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 1,
+    "method": "bgnbd",
+    "predicted_profit": 225869.0184302341,
+    "outcome_profit_proxy": 229058.77744,
+    "contacts": 17075
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 1,
+    "method": "constant",
+    "predicted_profit": 458751.66354841716,
+    "outcome_profit_proxy": 229173.18064000004,
+    "contacts": 17150
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 1,
+    "method": "lightgbm",
+    "predicted_profit": 224093.75894516625,
+    "outcome_profit_proxy": 229161.69204000002,
+    "contacts": 17151
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 1,
+    "method": "logistic",
+    "predicted_profit": 228752.11501580477,
+    "outcome_profit_proxy": 228728.57424000002,
+    "contacts": 16935
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 1,
+    "method": "recency",
+    "predicted_profit": 127587.64988343444,
+    "outcome_profit_proxy": 127168.88526000001,
+    "contacts": 9144
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 1,
+    "method": "rfm",
+    "predicted_profit": 274076.5025707017,
+    "outcome_profit_proxy": 229151.05144,
+    "contacts": 17147
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 2,
+    "method": "bgnbd",
+    "predicted_profit": 208980.56062247354,
+    "outcome_profit_proxy": 211717.10244,
+    "contacts": 16647
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 2,
+    "method": "constant",
+    "predicted_profit": 441706.6990636867,
+    "outcome_profit_proxy": 211936.33743999997,
+    "contacts": 16915
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 2,
+    "method": "lightgbm",
+    "predicted_profit": 207093.27802828338,
+    "outcome_profit_proxy": 211300.96244,
+    "contacts": 16769
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 2,
+    "method": "logistic",
+    "predicted_profit": 212155.83467554348,
+    "outcome_profit_proxy": 210268.87684,
+    "contacts": 16207
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 2,
+    "method": "recency",
+    "predicted_profit": 118537.05527193783,
+    "outcome_profit_proxy": 117854.62586000001,
+    "contacts": 8939
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 2,
+    "method": "rfm",
+    "predicted_profit": 257070.39271540553,
+    "outcome_profit_proxy": 211686.75344,
+    "contacts": 16814
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 5,
+    "method": "bgnbd",
+    "predicted_profit": 163026.37051802065,
+    "outcome_profit_proxy": 161415.41423999998,
+    "contacts": 13671
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 5,
+    "method": "constant",
+    "predicted_profit": 393703.9246335671,
+    "outcome_profit_proxy": 160841.95324,
+    "contacts": 14722
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 5,
+    "method": "lightgbm",
+    "predicted_profit": 160952.43975908283,
+    "outcome_profit_proxy": 156952.87464,
+    "contacts": 13647
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 5,
+    "method": "logistic",
+    "predicted_profit": 168262.9331789698,
+    "outcome_profit_proxy": 151398.02298,
+    "contacts": 12867
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 5,
+    "method": "recency",
+    "predicted_profit": 94046.94984454346,
+    "outcome_profit_proxy": 89713.41586,
+    "contacts": 7174
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 5,
+    "method": "rfm",
+    "predicted_profit": 210402.59596952592,
+    "outcome_profit_proxy": 157054.49244,
+    "contacts": 13989
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 10,
+    "method": "bgnbd",
+    "predicted_profit": 109302.97049529207,
+    "outcome_profit_proxy": 98564.13003999999,
+    "contacts": 8126
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 10,
+    "method": "constant",
+    "predicted_profit": 330405.80261226004,
+    "outcome_profit_proxy": 89713.16043999999,
+    "contacts": 10529
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 10,
+    "method": "lightgbm",
+    "predicted_profit": 108207.30041360356,
+    "outcome_profit_proxy": 83931.29858,
+    "contacts": 7837
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 10,
+    "method": "logistic",
+    "predicted_profit": 117368.3328272945,
+    "outcome_profit_proxy": 79604.07318,
+    "contacts": 7938
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 10,
+    "method": "recency",
+    "predicted_profit": 65538.41865757703,
+    "outcome_profit_proxy": 52439.40826,
+    "contacts": 4259
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 10,
+    "method": "rfm",
+    "predicted_profit": 154857.60420703533,
+    "outcome_profit_proxy": 84043.17058,
+    "contacts": 8513
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 20,
+    "method": "bgnbd",
+    "predicted_profit": 60430.99392254618,
+    "outcome_profit_proxy": 40938.878520000006,
+    "contacts": 2865
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 20,
+    "method": "constant",
+    "predicted_profit": 253451.37320067844,
+    "outcome_profit_proxy": 12928.860840000001,
+    "contacts": 5700
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 20,
+    "method": "lightgbm",
+    "predicted_profit": 61915.20473607826,
+    "outcome_profit_proxy": 29166.65952,
+    "contacts": 2667
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 20,
+    "method": "logistic",
+    "predicted_profit": 66271.03029906972,
+    "outcome_profit_proxy": 20100.082120000006,
+    "contacts": 3211
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 20,
+    "method": "recency",
+    "predicted_profit": 38845.04940225425,
+    "outcome_profit_proxy": 20799.662060000002,
+    "contacts": 1664
+  },
+  {
+    "save_rate": 0.2,
+    "offer_cost": 20,
+    "method": "rfm",
+    "predicted_profit": 101785.2234139127,
+    "outcome_profit_proxy": 20395.267320000006,
+    "contacts": 3279
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 1,
+    "method": "bgnbd",
+    "predicted_profit": 347359.28992429713,
+    "outcome_profit_proxy": 352258.71885999996,
+    "contacts": 17144
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 1,
+    "method": "constant",
+    "predicted_profit": 696713.9840031822,
+    "outcome_profit_proxy": 352379.10816,
+    "contacts": 17190
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 1,
+    "method": "lightgbm",
+    "predicted_profit": 344727.61288909666,
+    "outcome_profit_proxy": 352373.24116,
+    "contacts": 17198
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 1,
+    "method": "logistic",
+    "predicted_profit": 351634.31610290415,
+    "outcome_profit_proxy": 352181.08086,
+    "contacts": 17085
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 1,
+    "method": "recency",
+    "predicted_profit": 195963.0443739712,
+    "outcome_profit_proxy": 195376.80258999998,
+    "contacts": 9179
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 1,
+    "method": "rfm",
+    "predicted_profit": 419699.45783085906,
+    "outcome_profit_proxy": 352364.68726,
+    "contacts": 17192
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 2,
+    "method": "bgnbd",
+    "predicted_profit": 330289.63298360846,
+    "outcome_profit_proxy": 334981.33376,
+    "contacts": 16976
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 2,
+    "method": "constant",
+    "predicted_profit": 679570.1152783429,
+    "outcome_profit_proxy": 335155.27495999995,
+    "contacts": 17084
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 2,
+    "method": "lightgbm",
+    "predicted_profit": 327579.99117402843,
+    "outcome_profit_proxy": 335129.30746000004,
+    "contacts": 17083
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 2,
+    "method": "logistic",
+    "predicted_profit": 334707.79755880224,
+    "outcome_profit_proxy": 334041.58295999997,
+    "contacts": 16740
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 2,
+    "method": "recency",
+    "predicted_profit": 186823.69136316434,
+    "outcome_profit_proxy": 186122.96258999998,
+    "contacts": 9087
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 2,
+    "method": "rfm",
+    "predicted_profit": 402560.36262643425,
+    "outcome_profit_proxy": 335007.57305999997,
+    "contacts": 17067
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 5,
+    "method": "bgnbd",
+    "predicted_profit": 281163.0858094549,
+    "outcome_profit_proxy": 282570.55435999995,
+    "contacts": 15557
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 5,
+    "method": "constant",
+    "predicted_profit": 629288.6471682375,
+    "outcome_profit_proxy": 283308.43656,
+    "contacts": 16230
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 5,
+    "method": "lightgbm",
+    "predicted_profit": 278127.19749857247,
+    "outcome_profit_proxy": 280663.94545999996,
+    "contacts": 15653
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 5,
+    "method": "logistic",
+    "predicted_profit": 287111.1943866778,
+    "outcome_profit_proxy": 275240.04456,
+    "contacts": 14835
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 5,
+    "method": "recency",
+    "predicted_profit": 160445.98188261883,
+    "outcome_profit_proxy": 157785.27169,
+    "contacts": 8344
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 5,
+    "method": "rfm",
+    "predicted_profit": 352881.721303886,
+    "outcome_profit_proxy": 281467.91546,
+    "contacts": 15797
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 10,
+    "method": "bgnbd",
+    "predicted_profit": 212945.22729110403,
+    "outcome_profit_proxy": 205106.36745999992,
+    "contacts": 11615
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 10,
+    "method": "constant",
+    "predicted_profit": 555613.433542582,
+    "outcome_profit_proxy": 202478.23695999998,
+    "contacts": 13298
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 10,
+    "method": "lightgbm",
+    "predicted_profit": 210067.57905616565,
+    "outcome_profit_proxy": 193381.75887,
+    "contacts": 11469
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 10,
+    "method": "logistic",
+    "predicted_profit": 222702.1540535422,
+    "outcome_profit_proxy": 183057.58066999997,
+    "contacts": 10939
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 10,
+    "method": "recency",
+    "predicted_profit": 124372.6346375088,
+    "outcome_profit_proxy": 113618.17009,
+    "contacts": 6191
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 10,
+    "method": "rfm",
+    "predicted_profit": 283099.1237435197,
+    "outcome_profit_proxy": 193396.72116999998,
+    "contacts": 11984
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 20,
+    "method": "bgnbd",
+    "predicted_profit": 130368.23059596965,
+    "outcome_profit_proxy": 106356.13707,
+    "contacts": 5466
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 20,
+    "method": "constant",
+    "predicted_profit": 448986.6991703292,
+    "outcome_profit_proxy": 86596.43385999999,
+    "contacts": 8305
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 20,
+    "method": "lightgbm",
+    "predicted_profit": 130124.51797370454,
+    "outcome_profit_proxy": 83071.09937999999,
+    "contacts": 5205
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 20,
+    "method": "logistic",
+    "predicted_profit": 142105.10107727445,
+    "outcome_profit_proxy": 74830.68206999998,
+    "contacts": 5760
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 20,
+    "method": "recency",
+    "predicted_profit": 80564.49092163882,
+    "outcome_profit_proxy": 56883.769889999996,
+    "contacts": 2967
+  },
+  {
+    "save_rate": 0.3,
+    "offer_cost": 20,
+    "method": "rfm",
+    "predicted_profit": 196665.49812582546,
+    "outcome_profit_proxy": 79393.02056999998,
+    "contacts": 5931
+  }
+]

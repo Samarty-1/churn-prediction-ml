@@ -1,10 +1,10 @@
 """Mature 90-day nonpurchase labels; labels never flow into feature construction."""
 
-from churn.holdout import HORIZON, OBSERVATION_END, require_development
+from churn.holdout import HORIZON, OBSERVATION_END, require_evaluation_cutoff
 
 
 def build_labels(connection, cutoff, *, observation_end=OBSERVATION_END):
-    cutoff = require_development(cutoff)
+    cutoff = require_evaluation_cutoff(cutoff)
     if cutoff + HORIZON > observation_end:
         raise ValueError("Outcome window is not fully observed")
     return connection.execute(
