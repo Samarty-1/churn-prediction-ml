@@ -12,15 +12,16 @@ All rebuild work is on `rebuild-real-data`; nothing is pushed without authorizat
 - Phase 4: explicit approval to unseal once; report the frozen evaluation regardless of result.
 - Phase 5: decision interface, app, model card, generated README and CI.
 
-Current code implements only Phase 1. No labels or evaluation snapshots exist;
-no holdout results have been computed. Raw and staged invoices include the full
-source date range for cleaning validation. The evaluation access guard will be
-implemented before any cutoff-level labels or models are created.
+Current code implements Phases 1 and 2. Development snapshots and temporal
+invariance audits are available. Holdout snapshots and model fits do not exist.
+The access guard blocks holdout feature, label and snapshot requests before data
+access; no unseal option exists. Raw and staged invoices retain the full source
+date range for cleaning. This is an evaluation guard, not raw-file encryption.
 
-Before modelling, resolve the truncated portions of the task in the preregistration:
-monthly cutoff anchor, success criterion, cost assumptions and value horizon.
-Training labels must have matured by each test cutoff (a past cutoff alone is
-insufficient when its outcome window extends into the test period).
+The previously truncated task details are specified in PREREGISTRATION.md.
+The user approved the primary profit assumptions during Phase 2. The complete
+preregistration still requires approval before modelling. Training label windows
+must mature by each test cutoff, including during inner selection and calibration.
 
 Future output conventions: `results/` for machine-readable results and
 `reports/figures/` for plots. A pipeline command must never bypass approval gates.

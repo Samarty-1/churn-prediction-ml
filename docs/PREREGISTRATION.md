@@ -164,6 +164,11 @@ Sensitivity grid: save_rate in [0.02, 0.05, 0.10, 0.20, 0.30], offer_cost in
 predictions only. It is descriptive and cannot replace the primary assumption cell.
 No treatment or offer exists in this dataset, so actual uplift and causal profit
 are unknown. A randomized retention trial is required before deployment.
+Monthly outcome windows overlap. Pooled profit is a sum of independent historical
+campaign replays, not an additive forecast of revenue from repeatedly treating
+the same customers. Repeated-offer fatigue and cross-campaign treatment effects
+are unobserved; show per-cutoff and per-customer-cutoff values to avoid implying
+that overlapping replay totals are a realizable quarterly cash forecast.
 
 ## Metrics, uncertainty and success criterion
 
