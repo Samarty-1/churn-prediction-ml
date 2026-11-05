@@ -12,8 +12,16 @@ All rebuild work is on `rebuild-real-data`; nothing is pushed without authorizat
 - Phase 4: explicit approval to unseal once; report the frozen evaluation regardless of result.
 - Phase 5: decision interface, app, model card, generated README and CI.
 
-Current code implements Phases 1 and 2. Development snapshots and temporal
-invariance audits are available. Holdout snapshots and model fits do not exist.
+Status (2026-11-06): Phases 1-3 are complete. The development backtest, baselines,
+placebo, explanations and figures exist, and the trial ledger is generated from
+`results/trials.jsonl`. One-time unsealing is approved (`docs/HOLDOUT_APPROVAL.json`)
+but has not been used: no freeze manifest, holdout snapshots or holdout fits exist.
+Commands: `python -m churn backtest` reruns Phase 3, `python -m churn report`
+regenerates the README, model card and ledger, and `python -m churn holdout`
+performs the single Phase 4 evaluation. `run-all` never opens the holdout.
+
+Phase 2 notes, kept for the record: development snapshots and temporal
+invariance audits are available.
 The access guard blocks holdout feature, label and snapshot requests before data
 access; no unseal option exists. Raw and staged invoices retain the full source
 date range for cleaning. This is an evaluation guard, not raw-file encryption.

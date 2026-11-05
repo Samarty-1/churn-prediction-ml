@@ -69,6 +69,13 @@ def render_results(root):
         if phase == "holdout"
         else "Development results only; the holdout remains sealed."
     )
+    release_links = (
+        "See [model card](docs/MODEL_CARD.md), [freeze](results/freeze.json), and\n"
+        "[holdout receipt](results/holdout_receipt.json)."
+        if phase == "holdout"
+        else "See [model card](docs/MODEL_CARD.md). The freeze manifest and holdout\n"
+        "receipt are written when the holdout is opened (`python -m churn holdout`)."
+    )
     text = f"""# churn-prediction-ml
 
 **{headline}**
@@ -225,8 +232,7 @@ The app reads results only; sliders never retrain models or open the seal.
 
 CI runs lint, dependency checks and fixture tests without downloading UCI data.
 The README and model card are generated from result files and tested for exact agreement.
-See [model card](docs/MODEL_CARD.md), [freeze](results/freeze.json), and
-[holdout receipt](results/holdout_receipt.json). No data or model binaries are committed.
+{release_links} No data or model binaries are committed.
 
 Code: [MIT](LICENSE). Data: UCI CC BY 4.0.
 """
@@ -259,7 +265,10 @@ Complete metrics with customer-bootstrap CIs:
 """
     for method, record in pooled["methods"].items():
         m = record["metrics"]
-        card += f"| {method} | {measured(m['pr_auc'])} | {measured(m['roc_auc'])} | {measured(m['brier'])} |\n"
+        card += (
+            f"| {method} | {measured(m['pr_auc'])} | {measured(m['roc_auc'])} | "
+            f"{measured(m['brier'])} |\n"
+        )
     card += """
 ## Failures and limitations
 
@@ -301,8 +310,9 @@ def write_ledger(root):
         "# Trial ledger",
         "",
         "Generated from the append-only [full audit](../results/trials.jsonl).",
-        "Every fit, optimizer start, warning, candidate, calibration and threshold is retained there.",
-        "No unsuccessful result is removed. Development selection is optimistic; the holdout is confirmatory.",
+        "Every fit, optimizer start, warning, candidate, calibration and threshold",
+        "is retained there. No unsuccessful result is removed.",
+        "Development selection is optimistic; the holdout is confirmatory.",
         "",
         "| Audit line | Run | Event | Method | Context | Configuration / result |",
         "|---:|---|---|---|---|---|",
