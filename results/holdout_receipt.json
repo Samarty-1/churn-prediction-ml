@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "freeze_sha256": "816dfab1a8a74ba5844d22ce08de317c42b914657a3827d27abf14e695ccf938",
+  "started_at_utc": "2026-11-05T17:06:28.110825+00:00",
+  "approval": {
+    "approved": true,
+    "recorded_local_date": "2026-11-06",
+    "user_statement": "Yes\u00e2\u20ac\u201dunseal once after freezing and reporting results",
+    "scope": "One final evaluation of July, August and September 2011 after Phase 3 freeze; no post-holdout retuning; no GitHub push."
+  },
+  "evaluation_sha256": "2547d8fb4bad1878562472cfd2874b751684bd03cc1d0d32a0765159823d5275",
+  "predictions_sha256": "6cb45e8ccbbfdfbaa90a42f092e0efa69687b3db9149ecf375769357a61bde20",
+  "explained_sha256": "0d52c950d101333e745b8d1ae397d91c77386a3cfeb750ffefd44ea9023fd5ed",
+  "finished_at_utc": "2026-11-05T17:06:50.900442+00:00"
+}

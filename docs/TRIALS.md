@@ -436,3 +436,120 @@ Development selection is optimistic; the holdout is confirmatory.
 | 427 | placebo | calibration | constant | outer:2011-06-09 | `{"candidates": [{"brier": 0.26739568090889776, "kind": "platt", "validation_rows": 16953}, {"brier": 0.2592114984485752, "kind": "isotonic", "validation_rows": 16953}], "selected": "native"}` |
 | 428 | placebo | fit | constant | outer:2011-06-09 | `{"config": {}, "rows": 36876, "status": "ok", "warnings": []}` |
 | 429 | placebo | outer_result | constant | 2011-06-09 | `{"average_precision": 0.6392873669597409, "calibration": "native", "config": {}, "contacts": 1297, "cutoff": "2011-06-09", "profit": 22349.539900000003}` |
+| 430 | final_fit_before_unseal | fit | logistic | inner:2010-09-09 | `{"config": {"C": 0.01}, "rows": 2760, "status": "ok", "warnings": []}` |
+| 431 | final_fit_before_unseal | fit | logistic | inner:2010-10-09 | `{"config": {"C": 0.01}, "rows": 5770, "status": "ok", "warnings": []}` |
+| 432 | final_fit_before_unseal | fit | logistic | inner:2010-11-09 | `{"config": {"C": 0.01}, "rows": 8944, "status": "ok", "warnings": []}` |
+| 433 | final_fit_before_unseal | fit | logistic | inner:2010-12-09 | `{"config": {"C": 0.01}, "rows": 12281, "status": "ok", "warnings": []}` |
+| 434 | final_fit_before_unseal | fit | logistic | inner:2011-01-09 | `{"config": {"C": 0.01}, "rows": 15927, "status": "ok", "warnings": []}` |
+| 435 | final_fit_before_unseal | fit | logistic | inner:2011-02-09 | `{"config": {"C": 0.01}, "rows": 19923, "status": "ok", "warnings": []}` |
+| 436 | final_fit_before_unseal | fit | logistic | inner:2011-03-09 | `{"config": {"C": 0.01}, "rows": 24152, "status": "ok", "warnings": []}` |
+| 437 | final_fit_before_unseal | fit | logistic | inner:2011-04-09 | `{"config": {"C": 0.01}, "rows": 28362, "status": "ok", "warnings": []}` |
+| 438 | final_fit_before_unseal | candidate | logistic | final_frozen_fit | `{"config": {"C": 0.01}, "inner_average_precision": 0.7564709430904903, "validation_rows": 32261}` |
+| 439 | final_fit_before_unseal | fit | logistic | inner:2010-09-09 | `{"config": {"C": 0.1}, "rows": 2760, "status": "ok", "warnings": []}` |
+| 440 | final_fit_before_unseal | fit | logistic | inner:2010-10-09 | `{"config": {"C": 0.1}, "rows": 5770, "status": "ok", "warnings": []}` |
+| 441 | final_fit_before_unseal | fit | logistic | inner:2010-11-09 | `{"config": {"C": 0.1}, "rows": 8944, "status": "ok", "warnings": []}` |
+| 442 | final_fit_before_unseal | fit | logistic | inner:2010-12-09 | `{"config": {"C": 0.1}, "rows": 12281, "status": "ok", "warnings": []}` |
+| 443 | final_fit_before_unseal | fit | logistic | inner:2011-01-09 | `{"config": {"C": 0.1}, "rows": 15927, "status": "ok", "warnings": []}` |
+| 444 | final_fit_before_unseal | fit | logistic | inner:2011-02-09 | `{"config": {"C": 0.1}, "rows": 19923, "status": "ok", "warnings": []}` |
+| 445 | final_fit_before_unseal | fit | logistic | inner:2011-03-09 | `{"config": {"C": 0.1}, "rows": 24152, "status": "ok", "warnings": []}` |
+| 446 | final_fit_before_unseal | fit | logistic | inner:2011-04-09 | `{"config": {"C": 0.1}, "rows": 28362, "status": "ok", "warnings": []}` |
+| 447 | final_fit_before_unseal | candidate | logistic | final_frozen_fit | `{"config": {"C": 0.1}, "inner_average_precision": 0.7533095963792743, "validation_rows": 32261}` |
+| 448 | final_fit_before_unseal | fit | logistic | inner:2010-09-09 | `{"config": {"C": 1.0}, "rows": 2760, "status": "ok", "warnings": []}` |
+| 449 | final_fit_before_unseal | fit | logistic | inner:2010-10-09 | `{"config": {"C": 1.0}, "rows": 5770, "status": "ok", "warnings": []}` |
+| 450 | final_fit_before_unseal | fit | logistic | inner:2010-11-09 | `{"config": {"C": 1.0}, "rows": 8944, "status": "ok", "warnings": []}` |
+| 451 | final_fit_before_unseal | fit | logistic | inner:2010-12-09 | `{"config": {"C": 1.0}, "rows": 12281, "status": "ok", "warnings": []}` |
+| 452 | final_fit_before_unseal | fit | logistic | inner:2011-01-09 | `{"config": {"C": 1.0}, "rows": 15927, "status": "ok", "warnings": []}` |
+| 453 | final_fit_before_unseal | fit | logistic | inner:2011-02-09 | `{"config": {"C": 1.0}, "rows": 19923, "status": "ok", "warnings": []}` |
+| 454 | final_fit_before_unseal | fit | logistic | inner:2011-03-09 | `{"config": {"C": 1.0}, "rows": 24152, "status": "ok", "warnings": []}` |
+| 455 | final_fit_before_unseal | fit | logistic | inner:2011-04-09 | `{"config": {"C": 1.0}, "rows": 28362, "status": "ok", "warnings": []}` |
+| 456 | final_fit_before_unseal | candidate | logistic | final_frozen_fit | `{"config": {"C": 1.0}, "inner_average_precision": 0.7447938782229744, "validation_rows": 32261}` |
+| 457 | final_fit_before_unseal | calibration | logistic | final_frozen_fit | `{"candidates": [{"brier": 0.23753578401276132, "kind": "platt", "validation_rows": 21282}, {"brier": 0.23241334634993738, "kind": "isotonic", "validation_rows": 21282}], "selected": "isotonic"}` |
+| 458 | final_fit_before_unseal | fit | logistic | final_frozen_fit | `{"config": {"C": 0.01}, "rows": 41205, "status": "ok", "warnings": []}` |
+| 459 | final_fit_before_unseal | fit | lightgbm | inner:2010-09-09 | `{"config": {"min_child_samples": 50, "num_leaves": 7}, "rows": 2760, "status": "ok", "warnings": []}` |
+| 460 | final_fit_before_unseal | fit | lightgbm | inner:2010-10-09 | `{"config": {"min_child_samples": 50, "num_leaves": 7}, "rows": 5770, "status": "ok", "warnings": []}` |
+| 461 | final_fit_before_unseal | fit | lightgbm | inner:2010-11-09 | `{"config": {"min_child_samples": 50, "num_leaves": 7}, "rows": 8944, "status": "ok", "warnings": []}` |
+| 462 | final_fit_before_unseal | fit | lightgbm | inner:2010-12-09 | `{"config": {"min_child_samples": 50, "num_leaves": 7}, "rows": 12281, "status": "ok", "warnings": []}` |
+| 463 | final_fit_before_unseal | fit | lightgbm | inner:2011-01-09 | `{"config": {"min_child_samples": 50, "num_leaves": 7}, "rows": 15927, "status": "ok", "warnings": []}` |
+| 464 | final_fit_before_unseal | fit | lightgbm | inner:2011-02-09 | `{"config": {"min_child_samples": 50, "num_leaves": 7}, "rows": 19923, "status": "ok", "warnings": []}` |
+| 465 | final_fit_before_unseal | fit | lightgbm | inner:2011-03-09 | `{"config": {"min_child_samples": 50, "num_leaves": 7}, "rows": 24152, "status": "ok", "warnings": []}` |
+| 466 | final_fit_before_unseal | fit | lightgbm | inner:2011-04-09 | `{"config": {"min_child_samples": 50, "num_leaves": 7}, "rows": 28362, "status": "ok", "warnings": []}` |
+| 467 | final_fit_before_unseal | candidate | lightgbm | final_frozen_fit | `{"config": {"min_child_samples": 50, "num_leaves": 7}, "inner_average_precision": 0.7599901110936554, "validation_rows": 32261}` |
+| 468 | final_fit_before_unseal | fit | lightgbm | inner:2010-09-09 | `{"config": {"min_child_samples": 50, "num_leaves": 15}, "rows": 2760, "status": "ok", "warnings": []}` |
+| 469 | final_fit_before_unseal | fit | lightgbm | inner:2010-10-09 | `{"config": {"min_child_samples": 50, "num_leaves": 15}, "rows": 5770, "status": "ok", "warnings": []}` |
+| 470 | final_fit_before_unseal | fit | lightgbm | inner:2010-11-09 | `{"config": {"min_child_samples": 50, "num_leaves": 15}, "rows": 8944, "status": "ok", "warnings": []}` |
+| 471 | final_fit_before_unseal | fit | lightgbm | inner:2010-12-09 | `{"config": {"min_child_samples": 50, "num_leaves": 15}, "rows": 12281, "status": "ok", "warnings": []}` |
+| 472 | final_fit_before_unseal | fit | lightgbm | inner:2011-01-09 | `{"config": {"min_child_samples": 50, "num_leaves": 15}, "rows": 15927, "status": "ok", "warnings": []}` |
+| 473 | final_fit_before_unseal | fit | lightgbm | inner:2011-02-09 | `{"config": {"min_child_samples": 50, "num_leaves": 15}, "rows": 19923, "status": "ok", "warnings": []}` |
+| 474 | final_fit_before_unseal | fit | lightgbm | inner:2011-03-09 | `{"config": {"min_child_samples": 50, "num_leaves": 15}, "rows": 24152, "status": "ok", "warnings": []}` |
+| 475 | final_fit_before_unseal | fit | lightgbm | inner:2011-04-09 | `{"config": {"min_child_samples": 50, "num_leaves": 15}, "rows": 28362, "status": "ok", "warnings": []}` |
+| 476 | final_fit_before_unseal | candidate | lightgbm | final_frozen_fit | `{"config": {"min_child_samples": 50, "num_leaves": 15}, "inner_average_precision": 0.756141963734571, "validation_rows": 32261}` |
+| 477 | final_fit_before_unseal | fit | lightgbm | inner:2010-09-09 | `{"config": {"min_child_samples": 100, "num_leaves": 15}, "rows": 2760, "status": "ok", "warnings": []}` |
+| 478 | final_fit_before_unseal | fit | lightgbm | inner:2010-10-09 | `{"config": {"min_child_samples": 100, "num_leaves": 15}, "rows": 5770, "status": "ok", "warnings": []}` |
+| 479 | final_fit_before_unseal | fit | lightgbm | inner:2010-11-09 | `{"config": {"min_child_samples": 100, "num_leaves": 15}, "rows": 8944, "status": "ok", "warnings": []}` |
+| 480 | final_fit_before_unseal | fit | lightgbm | inner:2010-12-09 | `{"config": {"min_child_samples": 100, "num_leaves": 15}, "rows": 12281, "status": "ok", "warnings": []}` |
+| 481 | final_fit_before_unseal | fit | lightgbm | inner:2011-01-09 | `{"config": {"min_child_samples": 100, "num_leaves": 15}, "rows": 15927, "status": "ok", "warnings": []}` |
+| 482 | final_fit_before_unseal | fit | lightgbm | inner:2011-02-09 | `{"config": {"min_child_samples": 100, "num_leaves": 15}, "rows": 19923, "status": "ok", "warnings": []}` |
+| 483 | final_fit_before_unseal | fit | lightgbm | inner:2011-03-09 | `{"config": {"min_child_samples": 100, "num_leaves": 15}, "rows": 24152, "status": "ok", "warnings": []}` |
+| 484 | final_fit_before_unseal | fit | lightgbm | inner:2011-04-09 | `{"config": {"min_child_samples": 100, "num_leaves": 15}, "rows": 28362, "status": "ok", "warnings": []}` |
+| 485 | final_fit_before_unseal | candidate | lightgbm | final_frozen_fit | `{"config": {"min_child_samples": 100, "num_leaves": 15}, "inner_average_precision": 0.7570175484832068, "validation_rows": 32261}` |
+| 486 | final_fit_before_unseal | fit | lightgbm | inner:2010-09-09 | `{"config": {"min_child_samples": 100, "num_leaves": 31}, "rows": 2760, "status": "ok", "warnings": []}` |
+| 487 | final_fit_before_unseal | fit | lightgbm | inner:2010-10-09 | `{"config": {"min_child_samples": 100, "num_leaves": 31}, "rows": 5770, "status": "ok", "warnings": []}` |
+| 488 | final_fit_before_unseal | fit | lightgbm | inner:2010-11-09 | `{"config": {"min_child_samples": 100, "num_leaves": 31}, "rows": 8944, "status": "ok", "warnings": []}` |
+| 489 | final_fit_before_unseal | fit | lightgbm | inner:2010-12-09 | `{"config": {"min_child_samples": 100, "num_leaves": 31}, "rows": 12281, "status": "ok", "warnings": []}` |
+| 490 | final_fit_before_unseal | fit | lightgbm | inner:2011-01-09 | `{"config": {"min_child_samples": 100, "num_leaves": 31}, "rows": 15927, "status": "ok", "warnings": []}` |
+| 491 | final_fit_before_unseal | fit | lightgbm | inner:2011-02-09 | `{"config": {"min_child_samples": 100, "num_leaves": 31}, "rows": 19923, "status": "ok", "warnings": []}` |
+| 492 | final_fit_before_unseal | fit | lightgbm | inner:2011-03-09 | `{"config": {"min_child_samples": 100, "num_leaves": 31}, "rows": 24152, "status": "ok", "warnings": []}` |
+| 493 | final_fit_before_unseal | fit | lightgbm | inner:2011-04-09 | `{"config": {"min_child_samples": 100, "num_leaves": 31}, "rows": 28362, "status": "ok", "warnings": []}` |
+| 494 | final_fit_before_unseal | candidate | lightgbm | final_frozen_fit | `{"config": {"min_child_samples": 100, "num_leaves": 31}, "inner_average_precision": 0.7528942509723053, "validation_rows": 32261}` |
+| 495 | final_fit_before_unseal | calibration | lightgbm | final_frozen_fit | `{"candidates": [{"brier": 0.22362351057452073, "kind": "platt", "validation_rows": 21282}, {"brier": 0.2207951363227316, "kind": "isotonic", "validation_rows": 21282}], "selected": "isotonic"}` |
+| 496 | final_fit_before_unseal | fit | lightgbm | final_frozen_fit | `{"config": {"min_child_samples": 50, "num_leaves": 7}, "rows": 41205, "status": "ok", "warnings": []}` |
+| 497 | final_fit_before_unseal | fit | recency | inner:2010-09-09 | `{"config": {}, "rows": 2760, "status": "ok", "warnings": []}` |
+| 498 | final_fit_before_unseal | fit | recency | inner:2010-10-09 | `{"config": {}, "rows": 5770, "status": "ok", "warnings": []}` |
+| 499 | final_fit_before_unseal | fit | recency | inner:2010-11-09 | `{"config": {}, "rows": 8944, "status": "ok", "warnings": []}` |
+| 500 | final_fit_before_unseal | fit | recency | inner:2010-12-09 | `{"config": {}, "rows": 12281, "status": "ok", "warnings": []}` |
+| 501 | final_fit_before_unseal | fit | recency | inner:2011-01-09 | `{"config": {}, "rows": 15927, "status": "ok", "warnings": []}` |
+| 502 | final_fit_before_unseal | fit | recency | inner:2011-02-09 | `{"config": {}, "rows": 19923, "status": "ok", "warnings": []}` |
+| 503 | final_fit_before_unseal | fit | recency | inner:2011-03-09 | `{"config": {}, "rows": 24152, "status": "ok", "warnings": []}` |
+| 504 | final_fit_before_unseal | fit | recency | inner:2011-04-09 | `{"config": {}, "rows": 28362, "status": "ok", "warnings": []}` |
+| 505 | final_fit_before_unseal | candidate | recency | final_frozen_fit | `{"config": {}, "inner_average_precision": 0.7531047140846185, "validation_rows": 32261}` |
+| 506 | final_fit_before_unseal | calibration | recency | final_frozen_fit | `{"candidates": [{"brier": 0.227839498686377, "kind": "platt", "validation_rows": 21282}, {"brier": 0.22819427053447602, "kind": "isotonic", "validation_rows": 21282}], "selected": "platt"}` |
+| 507 | final_fit_before_unseal | threshold | recency | final_frozen_fit | `{"inner_profit": 25787.154199999997, "k": 30}` |
+| 508 | final_fit_before_unseal | threshold | recency | final_frozen_fit | `{"inner_profit": 10463.3243, "k": 60}` |
+| 509 | final_fit_before_unseal | threshold | recency | final_frozen_fit | `{"inner_profit": 0.0, "k": 90}` |
+| 510 | final_fit_before_unseal | threshold | recency | final_frozen_fit | `{"inner_profit": 0.0, "k": 120}` |
+| 511 | final_fit_before_unseal | threshold | recency | final_frozen_fit | `{"inner_profit": 0.0, "k": 180}` |
+| 512 | final_fit_before_unseal | threshold | recency | final_frozen_fit | `{"inner_profit": 0.0, "k": 270}` |
+| 513 | final_fit_before_unseal | fit | recency | final_frozen_fit | `{"config": {}, "rows": 41205, "status": "ok", "warnings": []}` |
+| 514 | final_fit_before_unseal | fit | rfm | inner:2010-09-09 | `{"config": {}, "rows": 2760, "status": "ok", "warnings": []}` |
+| 515 | final_fit_before_unseal | fit | rfm | inner:2010-10-09 | `{"config": {}, "rows": 5770, "status": "ok", "warnings": []}` |
+| 516 | final_fit_before_unseal | fit | rfm | inner:2010-11-09 | `{"config": {}, "rows": 8944, "status": "ok", "warnings": []}` |
+| 517 | final_fit_before_unseal | fit | rfm | inner:2010-12-09 | `{"config": {}, "rows": 12281, "status": "ok", "warnings": []}` |
+| 518 | final_fit_before_unseal | fit | rfm | inner:2011-01-09 | `{"config": {}, "rows": 15927, "status": "ok", "warnings": []}` |
+| 519 | final_fit_before_unseal | fit | rfm | inner:2011-02-09 | `{"config": {}, "rows": 19923, "status": "ok", "warnings": []}` |
+| 520 | final_fit_before_unseal | fit | rfm | inner:2011-03-09 | `{"config": {}, "rows": 24152, "status": "ok", "warnings": []}` |
+| 521 | final_fit_before_unseal | fit | rfm | inner:2011-04-09 | `{"config": {}, "rows": 28362, "status": "ok", "warnings": []}` |
+| 522 | final_fit_before_unseal | candidate | rfm | final_frozen_fit | `{"config": {}, "inner_average_precision": 0.7615015374917032, "validation_rows": 32261}` |
+| 523 | final_fit_before_unseal | calibration | rfm | final_frozen_fit | `{"candidates": [{"brier": 0.21807517674860938, "kind": "platt", "validation_rows": 21282}, {"brier": 0.2177931614730129, "kind": "isotonic", "validation_rows": 21282}], "selected": "isotonic"}` |
+| 524 | final_fit_before_unseal | fit | rfm | final_frozen_fit | `{"config": {}, "rows": 41205, "status": "ok", "warnings": []}` |
+| 525 | final_fit_before_unseal | fit | bgnbd | inner:2010-09-09 | `{"config": {}, "rows": 2760, "status": "ok", "warnings": []}` |
+| 526 | final_fit_before_unseal | fit | bgnbd | inner:2010-10-09 | `{"config": {}, "rows": 5770, "status": "ok", "warnings": []}` |
+| 527 | final_fit_before_unseal | fit | bgnbd | inner:2010-11-09 | `{"config": {}, "rows": 8944, "status": "ok", "warnings": []}` |
+| 528 | final_fit_before_unseal | fit | bgnbd | inner:2010-12-09 | `{"config": {}, "rows": 12281, "status": "ok", "warnings": []}` |
+| 529 | final_fit_before_unseal | fit | bgnbd | inner:2011-01-09 | `{"config": {}, "rows": 15927, "status": "ok", "warnings": []}` |
+| 530 | final_fit_before_unseal | fit | bgnbd | inner:2011-02-09 | `{"config": {}, "rows": 19923, "status": "ok", "warnings": []}` |
+| 531 | final_fit_before_unseal | fit | bgnbd | inner:2011-03-09 | `{"config": {}, "rows": 24152, "status": "ok", "warnings": []}` |
+| 532 | final_fit_before_unseal | fit | bgnbd | inner:2011-04-09 | `{"config": {}, "rows": 28362, "status": "ok", "warnings": []}` |
+| 533 | final_fit_before_unseal | candidate | bgnbd | final_frozen_fit | `{"config": {}, "inner_average_precision": 0.7883166981797933, "validation_rows": 32261}` |
+| 534 | final_fit_before_unseal | calibration | bgnbd | final_frozen_fit | `{"candidates": [{"brier": 0.20186774862961435, "kind": "platt", "validation_rows": 21282}, {"brier": 0.20217921506733352, "kind": "isotonic", "validation_rows": 21282}], "selected": "platt"}` |
+| 535 | final_fit_before_unseal | fit | bgnbd | final_frozen_fit | `{"config": {}, "rows": 41205, "status": "ok", "warnings": []}` |
+| 536 | final_fit_before_unseal | fit | constant | inner:2010-09-09 | `{"config": {}, "rows": 2760, "status": "ok", "warnings": []}` |
+| 537 | final_fit_before_unseal | fit | constant | inner:2010-10-09 | `{"config": {}, "rows": 5770, "status": "ok", "warnings": []}` |
+| 538 | final_fit_before_unseal | fit | constant | inner:2010-11-09 | `{"config": {}, "rows": 8944, "status": "ok", "warnings": []}` |
+| 539 | final_fit_before_unseal | fit | constant | inner:2010-12-09 | `{"config": {}, "rows": 12281, "status": "ok", "warnings": []}` |
+| 540 | final_fit_before_unseal | fit | constant | inner:2011-01-09 | `{"config": {}, "rows": 15927, "status": "ok", "warnings": []}` |
+| 541 | final_fit_before_unseal | fit | constant | inner:2011-02-09 | `{"config": {}, "rows": 19923, "status": "ok", "warnings": []}` |
+| 542 | final_fit_before_unseal | fit | constant | inner:2011-03-09 | `{"config": {}, "rows": 24152, "status": "ok", "warnings": []}` |
+| 543 | final_fit_before_unseal | fit | constant | inner:2011-04-09 | `{"config": {}, "rows": 28362, "status": "ok", "warnings": []}` |
+| 544 | final_fit_before_unseal | candidate | constant | final_frozen_fit | `{"config": {}, "inner_average_precision": 0.5921390460591156, "validation_rows": 32261}` |
+| 545 | final_fit_before_unseal | calibration | constant | final_frozen_fit | `{"candidates": [{"brier": 0.28520397283907867, "kind": "platt", "validation_rows": 21282}, {"brier": 0.2546470053760454, "kind": "isotonic", "validation_rows": 21282}], "selected": "native"}` |
+| 546 | final_fit_before_unseal | fit | constant | final_frozen_fit | `{"config": {}, "rows": 41205, "status": "ok", "warnings": []}` |

@@ -1,0 +1,172 @@
+{
+  "champion": "lightgbm",
+  "holdout_cutoffs": [
+    "2011-07-09",
+    "2011-08-09",
+    "2011-09-09"
+  ],
+  "training_cutoffs": [
+    "2010-06-09",
+    "2010-07-09",
+    "2010-08-09",
+    "2010-09-09",
+    "2010-10-09",
+    "2010-11-09",
+    "2010-12-09",
+    "2011-01-09",
+    "2011-02-09",
+    "2011-03-09",
+    "2011-04-09"
+  ],
+  "models": {
+    "logistic": {
+      "config": {
+        "C": 0.01
+      },
+      "calibration": "isotonic",
+      "recency_k": 30
+    },
+    "lightgbm": {
+      "config": {
+        "num_leaves": 7,
+        "min_child_samples": 50
+      },
+      "calibration": "isotonic",
+      "recency_k": 30
+    },
+    "recency": {
+      "config": {},
+      "calibration": "platt",
+      "recency_k": 30
+    },
+    "rfm": {
+      "config": {},
+      "calibration": "isotonic",
+      "recency_k": 30
+    },
+    "bgnbd": {
+      "config": {},
+      "calibration": "platt",
+      "recency_k": 30
+    },
+    "constant": {
+      "config": {},
+      "calibration": "native",
+      "recency_k": 30
+    }
+  },
+  "files": {
+    "src/churn/baselines.py": {
+      "kind": "text",
+      "sha256": "28eb59b86258a6bf7ef1a94bb32ba86ec3726227862aa5f79c130150f81dd7a8"
+    },
+    "src/churn/models.py": {
+      "kind": "text",
+      "sha256": "d80a3b7562cdff27c1265090c1f0cc32c9b361ead75dcf6f898d42bc1fde4eca"
+    },
+    "src/churn/decision.py": {
+      "kind": "text",
+      "sha256": "ecb430e0ff85b918afa590aa054819f2b242a771a7a1ee3c4a22f1bde68b829c"
+    },
+    "src/churn/evaluate.py": {
+      "kind": "text",
+      "sha256": "2e9df75a0fe994f81dc38d6dba0233199eac07de8593c3062833fc8ab0f2330c"
+    },
+    "src/churn/features.py": {
+      "kind": "text",
+      "sha256": "0e07026acd2bc5df9d8434842391e81df4362fa18faaeb7bc4e6640df0a348ac"
+    },
+    "src/churn/labels.py": {
+      "kind": "text",
+      "sha256": "664db5f7292b098cc99a5bc7045ebb2b8909dcabcaab109cc84321fbd0f9e826"
+    },
+    "src/churn/holdout.py": {
+      "kind": "text",
+      "sha256": "ffbfbcf82ed4a123819800282db87199363a682791f72050841ac752fef0d5cc"
+    },
+    "src/churn/holdout_run.py": {
+      "kind": "text",
+      "sha256": "3476bf8629a52b7caa5a62b40264356e7bc7f7dbe11fa37aacba8e023643a570"
+    },
+    "src/churn/snapshots.py": {
+      "kind": "text",
+      "sha256": "e561c97ec4bbdd18605fa55bf1752334c10488592d05dbb010ccdc4b9f845f54"
+    },
+    "src/churn/backtest.py": {
+      "kind": "text",
+      "sha256": "bf0952f2ae3ca4a599c68d6b2a9f881739b9584069d30763ede3fdcb38c74ba7"
+    },
+    "src/churn/explain.py": {
+      "kind": "text",
+      "sha256": "bb4c9a5689de487395a67e82205ff13b7be514411aef2fbeb9be228cecf32cb6"
+    },
+    "sql/features/01_snapshot.sql": {
+      "kind": "text",
+      "sha256": "872cf0b314c4c4aa3fa05c062c710f9a1f9886ff92adaf6b57ebcfa31dd2fa1d"
+    },
+    "docs/PREREGISTRATION.md": {
+      "kind": "text",
+      "sha256": "f41961ea36072c3358c6d08234888828d9422347d914b6d3d073be64d3135552"
+    },
+    "docs/IMPLEMENTATION_NOTES.md": {
+      "kind": "text",
+      "sha256": "c241443971bf8d0f4556ce381bd3161a7ad7f0a26aaaa1af073da89a7e3d7fb9"
+    },
+    "pyproject.toml": {
+      "kind": "text",
+      "sha256": "f8f29e878e827ddc53c48a52c52f36fe09a547d10f4dcadfc1f76f5649b72e65"
+    },
+    "requirements-lock.txt": {
+      "kind": "text",
+      "sha256": "575f767102f0f0cb71685ddb780fb3ce3496201db16ddaed0916e06afa5e8c67"
+    },
+    "results/development_evaluation.json": {
+      "kind": "text",
+      "sha256": "c52bd8b23eb4f7e6187867f7317a14d0fd073eee506516f81a1e0c31f4726dd1"
+    },
+    "results/placebo_evaluation.json": {
+      "kind": "text",
+      "sha256": "eacba9b67d54642271e77b8b9a0e17a311c7667f0ce7463701443fae75286145"
+    },
+    "docs/HOLDOUT_APPROVAL.json": {
+      "kind": "text",
+      "sha256": "0c17cbe6a26e872ea5d406c6e9533781f121d7bb2a85c6dda61899db2eaa0031"
+    },
+    "models/frozen/logistic.joblib": {
+      "kind": "binary",
+      "sha256": "d85e9e24fe4cf0985bdf3f747d7f3f30594b20796e501474dcfcc55fdec8359b"
+    },
+    "models/frozen/lightgbm.joblib": {
+      "kind": "binary",
+      "sha256": "96c19db34e96a3a98d8fa6f86f8402daa4bc78ab8edc4c455cea29bb57a53d96"
+    },
+    "models/frozen/recency.joblib": {
+      "kind": "binary",
+      "sha256": "896030a0fccd44817d759de814b6777b7eaa5848e9167532a984deacbc4626a9"
+    },
+    "models/frozen/rfm.joblib": {
+      "kind": "binary",
+      "sha256": "58bdc8b398528a802ace50f9e5a36478601279c08247c49e4efbc5bf6d4365db"
+    },
+    "models/frozen/bgnbd.joblib": {
+      "kind": "binary",
+      "sha256": "52141a6bfe4276f414026fff99cb8bb0141f78e909793bd4d36c60fd8e527e6f"
+    },
+    "models/frozen/constant.joblib": {
+      "kind": "binary",
+      "sha256": "de0b3f733331bbab45e51d361863cd06860537790c5441f478001c02d24e3649"
+    },
+    "models/frozen/training.parquet": {
+      "kind": "binary",
+      "sha256": "41904b4aa42f7a9e523828d044a4e76d097d0c034e677f6993ea21062cacf0eb"
+    },
+    "data/processed/sales.parquet": {
+      "kind": "binary",
+      "sha256": "57d8c1b2bfec3ea0bff4534a6dff7886930a3e9ad9fb77eee49c8152d3eb6fe2"
+    },
+    "data/processed/cancellations.parquet": {
+      "kind": "binary",
+      "sha256": "afcabb76e8544271325e149437e2a5a1c582f1d075daa90c930291f4191437b8"
+    }
+  }
+}

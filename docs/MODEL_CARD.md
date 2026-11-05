@@ -1,6 +1,6 @@
 # Model card
 
-ML superiority not established: lightgbm versus bgnbd, development profit-proxy difference GBP -7,316.42 (95% CI -8,413.80 to -6,322.93).
+ML superiority not established: lightgbm versus bgnbd, holdout profit-proxy difference GBP -11.21 (95% CI -319.00 to 293.59).
 
 ## Intended use
 
@@ -17,19 +17,19 @@ excluded. First observed purchase is not necessarily acquisition.
 
 ## Evaluation
 
-Development results only; the holdout remains sealed. Candidate: lightgbm. Main comparator: bgnbd.
-Paired difference: GBP -7,316.42; 95% CI
-[-8,413.80, -6,322.93].
+The approved holdout was opened once after a code/data/model freeze. No tuning followed. Candidate: lightgbm. Main comparator: bgnbd.
+Paired difference: GBP -11.21; 95% CI
+[-319.00, 293.59].
 Complete metrics with customer-bootstrap CIs:
 
 | Method | PR-AUC [95% CI] | ROC-AUC [95% CI] | Brier [95% CI] |
 |---|---:|---:|---:|
-| bgnbd | 0.817 [0.807, 0.826] | 0.757 [0.747, 0.768] | 0.194 [0.191, 0.198] |
-| constant | 0.631 [0.619, 0.642] | 0.487 [0.480, 0.494] | 0.248 [0.247, 0.248] |
-| lightgbm | 0.788 [0.779, 0.798] | 0.718 [0.708, 0.729] | 0.211 [0.208, 0.215] |
-| logistic | 0.761 [0.751, 0.772] | 0.673 [0.663, 0.683] | 0.227 [0.224, 0.231] |
-| recency | 0.768 [0.758, 0.779] | 0.659 [0.650, 0.668] | 0.223 [0.221, 0.225] |
-| rfm | 0.786 [0.776, 0.796] | 0.712 [0.702, 0.722] | 0.209 [0.206, 0.213] |
+| bgnbd | 0.774 [0.757, 0.790] | 0.781 [0.769, 0.793] | 0.194 [0.188, 0.199] |
+| constant | 0.550 [0.537, 0.564] | 0.500 [0.500, 0.500] | 0.248 [0.246, 0.250] |
+| lightgbm | 0.784 [0.770, 0.799] | 0.791 [0.780, 0.802] | 0.197 [0.192, 0.202] |
+| logistic | 0.757 [0.742, 0.773] | 0.774 [0.762, 0.786] | 0.233 [0.226, 0.239] |
+| recency | 0.724 [0.707, 0.741] | 0.721 [0.709, 0.733] | 0.221 [0.216, 0.226] |
+| rfm | 0.750 [0.735, 0.764] | 0.768 [0.756, 0.779] | 0.219 [0.213, 0.225] |
 
 ## Failures and limitations
 

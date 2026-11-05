@@ -1,8 +1,8 @@
 # churn-prediction-ml
 
-**ML superiority not established: lightgbm versus bgnbd, development profit-proxy difference GBP -7,316.42 (95% CI -8,413.80 to -6,322.93).**
+**ML superiority not established: lightgbm versus bgnbd, holdout profit-proxy difference GBP -11.21 (95% CI -319.00 to 293.59).**
 
-Development results only; the holdout remains sealed. The reported values are hypothetical retention policy values, not measured
+The approved holdout was opened once after a code/data/model freeze. No tuning followed. The reported values are hypothetical retention policy values, not measured
 treatment profit. The simple customer-base model is a serious comparator; an ML
 win is not assumed. Non-significance does not prove equivalence.
 
@@ -56,30 +56,25 @@ The registered held-out dates are 2011-07-09, 2011-08-09, 2011-09-09.
 The guard rejects access outside the one-use audited session. It is a procedural
 evaluation seal over public data, not protection against deliberate source-code edits.
 
-| Development cutoff | Eligible customers | Churn base rate |
+| Holdout cutoff | Eligible customers | Churn base rate |
 |---|---:|---:|
-| 2010-11-09 | 3,996 | 0.576827 |
-| 2010-12-09 | 4,229 | 0.686214 |
-| 2011-01-09 | 4,210 | 0.656057 |
-| 2011-02-09 | 4,240 | 0.645991 |
-| 2011-03-09 | 4,274 | 0.633131 |
-| 2011-04-09 | 4,329 | 0.625087 |
-| 2011-05-09 | 4,326 | 0.618816 |
-| 2011-06-09 | 4,322 | 0.639287 |
+| 2011-07-09 | 4,312 | 0.602505 |
+| 2011-08-09 | 4,339 | 0.552892 |
+| 2011-09-09 | 4,313 | 0.495015 |
 
 ## Models versus baselines
 
 PR-AUC means average precision. Profit brackets are customer-bootstrap 95% CIs;
-all per-cutoff and pooled metric CIs are in [the result file](results/development_evaluation.json).
+all per-cutoff and pooled metric CIs are in [the result file](results/holdout_evaluation.json).
 
 | Method | PR-AUC | ROC-AUC | Brier | Profit proxy GBP [95% CI] |
 |---|---:|---:|---:|---:|
-| bgnbd | 0.817 | 0.757 | 0.194 | 49,282.07 [43,673.03, 55,275.87] |
-| constant | 0.631 | 0.487 | 0.248 | 44,856.58 [38,895.65, 51,062.88] |
-| lightgbm | 0.788 | 0.718 | 0.211 | 41,965.65 [36,418.21, 47,887.18] |
-| logistic | 0.761 | 0.673 | 0.227 | 39,802.04 [34,334.47, 45,636.53] |
-| recency | 0.768 | 0.659 | 0.223 | 26,219.70 [22,767.50, 29,887.56] |
-| rfm | 0.786 | 0.712 | 0.209 | 42,021.59 [36,361.61, 47,807.44] |
+| bgnbd | 0.774 | 0.781 | 0.194 | 7,692.31 [3,687.07, 13,438.79] |
+| constant | 0.550 | 0.500 | 0.248 | 5,005.55 [924.23, 10,849.12] |
+| lightgbm | 0.784 | 0.791 | 0.197 | 7,681.10 [3,661.88, 13,475.65] |
+| logistic | 0.757 | 0.774 | 0.233 | 5,289.03 [1,219.60, 11,185.37] |
+| recency | 0.724 | 0.721 | 0.221 | 4,032.96 [1,767.26, 7,046.24] |
+| rfm | 0.750 | 0.768 | 0.219 | 5,308.71 [1,213.34, 11,131.67] |
 
 The selected ML candidate is **lightgbm**. Paired comparisons use the same sampled
 customers across methods; every sampled customer carries all their cutoff rows.
@@ -89,20 +84,20 @@ zero to establish the preregistered ML superiority claim.
 
 | Baseline | ML minus baseline GBP | Paired 95% CI | Familywise-95% interval |
 |---|---:|---:|---:|
-| recency | 15,745.95 | [12,748.03, 18,987.77] | [12,060.62, 19,785.12] |
-| rfm | -55.94 | [-931.31, 860.34] | [-1,088.83, 1,109.70] |
-| bgnbd | -7,316.42 | [-8,413.80, -6,322.93] | [-8,666.77, -6,158.16] |
+| recency | 3,648.14 | [1,520.73, 6,613.24] | [1,221.62, 7,370.91] |
+| rfm | 2,372.39 | [1,999.23, 2,740.85] | [1,897.12, 2,830.79] |
+| bgnbd | -11.21 | [-319.00, 293.59] | [-372.14, 383.56] |
 
 | Method | Precision top 10% [CI] | Lift top 10% [CI] | Precision top 20% [CI] | Lift top 20% [CI] |
 |---|---:|---:|---:|---:|
-| bgnbd | 0.881 [0.865, 0.896] | 1.386 [1.353, 1.417] | 0.878 [0.866, 0.890] | 1.382 [1.355, 1.408] |
-| constant | 0.601 [0.567, 0.639] | 0.946 [0.895, 1.001] | 0.616 [0.591, 0.641] | 0.969 [0.934, 1.004] |
-| lightgbm | 0.859 [0.842, 0.876] | 1.352 [1.320, 1.383] | 0.852 [0.840, 0.865] | 1.341 [1.317, 1.367] |
-| logistic | 0.869 [0.853, 0.884] | 1.367 [1.336, 1.398] | 0.863 [0.852, 0.875] | 1.358 [1.332, 1.384] |
-| recency | 0.821 [0.803, 0.838] | 1.291 [1.259, 1.324] | 0.822 [0.808, 0.834] | 1.293 [1.267, 1.317] |
-| rfm | 0.867 [0.850, 0.883] | 1.365 [1.334, 1.395] | 0.861 [0.848, 0.873] | 1.355 [1.329, 1.379] |
+| bgnbd | 0.823 [0.793, 0.850] | 1.496 [1.439, 1.551] | 0.831 [0.810, 0.850] | 1.510 [1.466, 1.552] |
+| constant | 0.524 [0.484, 0.565] | 0.952 [0.884, 1.023] | 0.535 [0.507, 0.563] | 0.973 [0.929, 1.019] |
+| lightgbm | 0.839 [0.812, 0.863] | 1.525 [1.473, 1.574] | 0.831 [0.812, 0.849] | 1.511 [1.471, 1.552] |
+| logistic | 0.800 [0.769, 0.828] | 1.454 [1.394, 1.507] | 0.807 [0.785, 0.827] | 1.467 [1.423, 1.510] |
+| recency | 0.773 [0.742, 0.805] | 1.406 [1.346, 1.463] | 0.773 [0.750, 0.795] | 1.404 [1.360, 1.446] |
+| rfm | 0.820 [0.791, 0.846] | 1.490 [1.435, 1.542] | 0.811 [0.791, 0.831] | 1.475 [1.433, 1.516] |
 
-![Probability reliability](reports/figures/development_reliability.png)
+![Probability reliability](reports/figures/holdout_reliability.png)
 
 BG/NBD uses a verified conditional probability of zero purchases in the prediction
 window. Probability alive is also retained in local predictions; it is not
@@ -124,10 +119,10 @@ churn in the payoff calculation. Comparing models' own predicted profits would
 reward overconfidence. This outcome-based profit proxy is still conditional on
 assumed retention effectiveness, not measured uplift.
 
-![Profit curve](reports/figures/development_profit_curve.png)
-![Sensitivity](reports/figures/development_sensitivity.png)
+![Profit curve](reports/figures/holdout_profit_curve.png)
+![Sensitivity](reports/figures/holdout_sensitivity.png)
 
-The full [sensitivity grid](results/development_sensitivity.json) varies save rate and
+The full [sensitivity grid](results/holdout_sensitivity.json) varies save rate and
 offer cost for every method. It cannot replace the preregistered primary cell.
 
 ## Placebo and explanations
@@ -139,7 +134,7 @@ Its profit-proxy difference versus constant risk was GBP -253.61
 (95% CI -475.90 to -50.09).
 The placebo was not repeatedly reshuffled to obtain a desired answer.
 
-![SHAP global importance](reports/figures/development_shap.png)
+![SHAP global importance](reports/figures/holdout_shap.png)
 
 SHAP explains uncalibrated model log odds with training-only background information.
 It describes associations, not causes or offer responsiveness. Local per-customer
@@ -180,7 +175,7 @@ The app reads results only; sliders never retrain models or open the seal.
 
 CI runs lint, dependency checks and fixture tests without downloading UCI data.
 The README and model card are generated from result files and tested for exact agreement.
-See [model card](docs/MODEL_CARD.md). The freeze manifest and holdout
-receipt are written when the holdout is opened (`python -m churn holdout`). No data or model binaries are committed.
+See [model card](docs/MODEL_CARD.md), [freeze](results/freeze.json), and
+[holdout receipt](results/holdout_receipt.json). No data or model binaries are committed.
 
 Code: [MIT](LICENSE). Data: UCI CC BY 4.0.
